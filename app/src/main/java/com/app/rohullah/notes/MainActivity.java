@@ -17,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<StrucNote> notes = new ArrayList<StrucNote>();
         ArrayAdapter<StrucNote> adapter = new AdapterNote(notes);
         lstContent.setAdapter(adapter);
-        lstContent.setAdapter(adapter);
 
+        for (int i=0;i<10;i++) {
+            StrucNote note = new StrucNote();
+            notes.add(note);
+        }
+
+        adapter.notifyDataSetChanged();
 
 
 
