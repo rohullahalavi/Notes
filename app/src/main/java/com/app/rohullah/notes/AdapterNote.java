@@ -12,27 +12,17 @@ public class AdapterNote extends ArrayAdapter<StrucNote> {
        super(G.context,R.layout.adapter_note,array);
    }
 
-    public static class viewHolder{
-
-        public viewHolder (View view){
-
-        }
-
-        public void fill(ArrayAdapter<StrucNote> adapter,StrucNote item,int position){
-
-        }
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        viewHolder holder;
+        ViewHolder holder;
         StrucNote item = getItem(position);
         if (convertView == null) {
             convertView=G.inflater.inflate(R.layout.adapter_note,parent,false);
-            holder= new viewHolder(convertView);
+            holder= new ViewHolder(convertView);
             convertView.setTag(holder);
         }else {
-            holder = (viewHolder) convertView.getTag();
+            holder = (ViewHolder) convertView.getTag();
         }
         holder.fill(this,item,position);
         return convertView;

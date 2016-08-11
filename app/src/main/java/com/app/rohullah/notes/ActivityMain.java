@@ -20,11 +20,11 @@ public class ActivityMain extends AppCompatActivity {
 
         for (int i=0;i<10;i++) {
             StrucNote note = new StrucNote();
+            note.title="Title"+i;
             notes.add(note);
         }
 
         adapter.notifyDataSetChanged();
-
 
 
     }
